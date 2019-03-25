@@ -5,6 +5,7 @@ async function index(req, res) {
     const posts = await PostModel.find()
     return res.json(posts);
   } catch (err) {
+    console.log(err)
     return res.json(err);
   }
 };
